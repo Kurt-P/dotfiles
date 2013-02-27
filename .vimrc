@@ -18,6 +18,7 @@ set shiftwidth=4
 set softtabstop=4
 set tw=80
 set nobackup
+set nowritebackup
 
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
