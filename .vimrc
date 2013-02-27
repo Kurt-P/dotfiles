@@ -18,6 +18,7 @@ set shiftwidth=4
 set softtabstop=4
 set tw=80
 set nobackup
+set nowritebackup
 
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
@@ -26,11 +27,11 @@ set nocompatible
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-if has("vms")
-  set nobackup		" do not keep a backup file, use versions instead
-else
-  set backup		" keep a backup file
-endif
+" if has("vms")
+  " set nobackup		" do not keep a backup file, use versions instead
+" else
+  " set backup		" keep a backup file
+" endif
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
