@@ -1,0 +1,9 @@
+[user]
+	name = 
+	email = 
+[color]
+	ut = true
+	branch = true
+	diff = true
+	interactive = true
+	status = true
