@@ -16,14 +16,12 @@ alias ls='ls --color=auto'
 
 alias pacman='sudo pacman'
 
-alias cowsay='fortune | cowsay'
-
 export EDITOR="vim"
 
 ##Scripts
-PATH=$PATH:$HOME/Scripts
+##PATH=$PATH:$HOME/Scripts
 
-##Export stuff for maven
+##Export stuff for maven, these were done for MacOS
 #export M2_HOME=$HOME/Apps/apache-maven-3.0.4
 #export M2=$M2_HOME/bin
 #PATH=$PATH:$M2
@@ -36,10 +34,8 @@ alias mkdir='mkdir -p'
 alias ll='ls -l'
 alias la='ls -A'
 alias clear='clear && ls'
-##alias halt='sudo halt'
-##alias reboot='sudo reboot'
 
-##Git aliases##
+##I <3 Git##
 alias gitb='git branch'
 alias gits='git status'
 alias gita='git add -A'
@@ -63,15 +59,16 @@ manswitch() {
     man $1 | less -p "^ +$2";
 }
 
+##quickly extract the contents of a file
 ex () {
   if [ -f $1 ] ; then
     case $1 in
       *.tar.bz2)   tar xjf $1        ;;
-      *.tar.gz)    tar xzf $1     ;;
+      *.tar.gz)    tar xvzf $1     ;;
       *.bz2)       bunzip2 $1       ;;
       *.rar)       rar x $1     ;;
       *.gz)        gunzip $1     ;;
-      *.tar)       tar xf $1        ;;
+      *.tar)       tar xvf $1        ;;
       *.tbz2)      tar xjf $1      ;;
       *.tgz)       tar xzf $1       ;;
       *.zip)       unzip $1     ;;
@@ -86,5 +83,3 @@ ex () {
 
 ##Show the contence of your home foler when you first open a termainal.
 ls
-
-cowsay
