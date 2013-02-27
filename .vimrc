@@ -6,7 +6,7 @@ set softtabstop=4		" backspace on tabs
 set tabstop=4			" number of spaces for a tab
 set backspace=indent,eol,start	" correct back spacing
 if version >= 703
-    set cc=80			" Make a read line at the 80 char
+    set cc=80			" Make a red line at the 80 char
 endif
 
 " Those backup files are really annoying
