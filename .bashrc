@@ -15,6 +15,8 @@ PS1='[\u@\h \W]\$ '
 alias ls='ls --color=auto'
 
 alias pacman='sudo pacman'
+# '[r]emove [o]rphans' - recursively remove ALL orphaned packages
+alias pacro="/usr/bin/pacman -Qtdq > /dev/null && sudo /usr/bin/pacman -Rs \$(/usr/bin/pacman -Qtdq | sed -e ':a;N;$!ba;s/\n/ /g')"
 
 export EDITOR="vim"
 
@@ -34,6 +36,7 @@ alias mkdir='mkdir -p'
 alias ll='ls -l'
 alias la='ls -A'
 alias clear='clear && ls'
+alias ping='ping -c 5'
 
 ##I <3 Git##
 alias gitb='git branch'
