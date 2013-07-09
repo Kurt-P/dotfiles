@@ -50,6 +50,11 @@ alias gitcom='git checkout master'
 alias gitl='git log'
 alias gitd='git diff'
 
+##History stuff
+HISTCONTROL=ignoreboth
+HISTSIZE=1000
+HISTFILESIZE=2000
+
 ##Show the contence of the folder you cd into.
 cd() {
     if [ -n "$1" ] ; then
