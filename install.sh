@@ -8,7 +8,3 @@ cp bashrc.bak ~/.bashrc
 cp gitconfig.bak ~/.gitconfig
 cp vimrc.bak ~/.vimrc
 echo "Finished copy"
-
-echo "Sourcing ~/.bashrc"
-source ~/.bashrc
-echo "Done!"
