@@ -1,3 +1,19 @@
+[alias]
+    co = checkout
+    br = branch -ra
+    ci = commit
+    st = status
+    fall = fetch --all
+    pl = pull
+    ps = push
+    ls = stash list
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    llog = log --date=local
+    lp = log -p
+    save = stash save
+    pop = stash pop
+    new = !sh -c 'git log $1@{1}..$1{0} "$@"'
+    undo = reset --hard
 [core]
 	editor = vim
 [user]

@@ -37,18 +37,7 @@ alias ll='ls -l'
 alias la='ls -A'
 alias clear='clear && ls'
 alias ping='ping -c 5'
-alias ifconfig='ip addr'
-
-##I <3 Git##
-alias gitb='git branch'
-alias gits='git status'
-alias gita='git add -A'
-alias gitcm='git commit -m'
-alias gitca='git commit -a'
-alias gitco='git checkout'
-alias gitcom='git checkout master'
-alias gitl='git log'
-alias gitd='git diff'
+alias ifconfig='ip addr' #Doesn't work on MacOS
 
 ##History stuff
 HISTCONTROL=ignoreboth
@@ -62,10 +51,6 @@ cd() {
     else
         builtin cd ~ && ls
     fi
-}
-
-manswitch() {
-    man $1 | less -p "^ +$2";
 }
 
 ##quickly extract the contents of a file
