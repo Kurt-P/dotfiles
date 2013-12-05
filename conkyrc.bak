@@ -1,3 +1,5 @@
+##Don't forget to delete /etc/conky/conky.conf, else you may run into some 
+##issues with your custom .conkyrc
 alignment top_right
 background no
 border_width 1
