@@ -42,10 +42,13 @@ $hr
 ${color grey}Uptime:$color $uptime
 ${color grey}Frequency (in MHz):$color $freq
 ${color grey}Frequency (in GHz):$color $freq_g
-${color grey}RAM Usage:$color $mem/$memmax - $memperc%
-${color grey}Swap Usage:$color $swap/$swapmax - $swapperc%
 ${color grey}CPU Usage:$color $cpu%
 ${color grey}Processes:$color $processes  ${color grey}Running:$color $running_processes
+$hr
+${color grey}RAM Usage:
+    $color $mem/$memmax - $memperc%
+${color grey}Swap Usage:
+    $color $swap/$swapmax - $swapperc%
 $hr
 ${color grey}File systems:
  / $color${fs_used /}/${fs_size /} ${fs_bar 6 /}
@@ -53,3 +56,12 @@ ${color grey}WiFi:
     Up:$color ${upspeed wlo1} ${color grey} - Down:$color ${downspeed wlo1}
 ${color grey}Ethernet:
     Up:$color ${upspeed enp0s25} ${color grey} - Down:$color ${downspeed enp0s25}
+$hr
+${color}Name              PID     CPU%   MEM%
+${color #ddaa00} ${top name 1} ${top pid 1} ${top cpu 1} ${top mem 1}
+${color lightgrey} ${top name 2} ${top pid 2} ${top cpu 2} ${top mem 2}
+${color lightgrey} ${top name 3} ${top pid 3} ${top cpu 3} ${top mem 3}
+${color}Mem usage
+${color #ddaa00} ${top_mem name 1} ${top_mem pid 1} ${top_mem cpu 1} ${top_mem mem 1}
+${color lightgrey} ${top_mem name 2} ${top_mem pid 2} ${top_mem cpu 2} ${top_mem mem 2}
+${color lightgrey} ${top_mem name 3} ${top_mem pid 3} ${top_mem cpu 3} ${top_mem mem 3}
