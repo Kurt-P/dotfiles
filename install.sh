@@ -4,6 +4,7 @@
 ##/home/$USER/ directory. I don't know if it'll work. I'll have to test it out.
 
 echo "Staring copy"
+mv ~/.bashrc ~/.bashrc.bakup
 cp bashrc.bak ~/.bashrc
 cp gitconfig.bak ~/.gitconfig
 cp vimrc.bak ~/.vimrc
