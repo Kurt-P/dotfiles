@@ -2,27 +2,30 @@
 # ~/.bashrc
 #
 
+# This is a .bashrc specificly for Mac OS
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 complete -cf sudo
 complete -cf man
-complete -cf whatis
-complete -cf manswitch
 
 PS1='[\u@\h \W]\$ '
 
-alias ls='ls --color=auto'
-
-alias pacman='sudo pacman'
-# '[r]emove [o]rphans' - recursively remove ALL orphaned packages
-alias pacro="pacman -Qtdq > /dev/null && pacman -Rs \$(pacman -Qtdq | sed -e ':a;N;$!ba;s/\n/ /g')"
+alias ls='ls -Gh'
 
 export EDITOR="vim"
+
+if [ -f ~/.git-completion.bash ] ; then
+    source ~/.git-completion.bash
+fi
 
 ## Scripts
 #PATH=$PATH:$HOME/Scripts
 #export PATH
+
+## Use if needed
+#export PATH=/opt/local/bin:/opt/local/sbin:/opt/bin:$PATH
 
 alias rm='rm -rf'
 alias cp='cp -r'
@@ -31,12 +34,6 @@ alias ll='ls -l'
 alias la='ls -A'
 alias clear='clear && ls'
 alias ping='ping -c 5'
-alias ifconfig='ip addr'
-
-## History stuff
-HISTCONTROL=ignoreboth
-HISTSIZE=1000
-HISTFILESIZE=2000
 
 ## Show the contence of the folder you cd into.
 cd() {
@@ -47,7 +44,7 @@ cd() {
     fi
 }
 
-## Quickly extract the contents of a file
+## Quickly extract the contents of a file ## Not all work on Mac OS
 ex () {
   if [ -f $1 ] ; then
     case $1 in
