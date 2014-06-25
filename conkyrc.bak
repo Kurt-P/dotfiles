@@ -63,7 +63,7 @@ Net
  | + Down: ${downspeed wlo1}kb/s (${totaldown wlo1})
  | + Ethernet
  | + Up:   ${upspeed enp0s25}kb/s (${totalup enp0s25})
- | + Down: ${upspeed enp0s25}kb/s (${totaldown enp0s25})
+ | + Down: ${downspeed enp0s25}kb/s (${totaldown enp0s25})
  +
 Processes
  +
