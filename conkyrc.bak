@@ -43,7 +43,7 @@ Kernel
  +
 Weather
  +
- | + ${execi 300 $HOME/.bin/temp.sh 56716}
+ | + ${execi 300 $HOME/.bin/temp 00000}
  +
 Time
  +
