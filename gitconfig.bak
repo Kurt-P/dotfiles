@@ -26,5 +26,3 @@
 	diff = true
 	interactive = true
 	status = true
-[merge]
-	ff = false
