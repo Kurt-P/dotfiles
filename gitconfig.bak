@@ -27,3 +27,5 @@
 	diff = true
 	interactive = true
 	status = true
+[push]
+	default = simple
