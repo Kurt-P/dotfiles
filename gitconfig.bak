@@ -15,6 +15,7 @@
     pop = stash pop
     new = !sh -c 'git log $1@{1}..$1{0} "$@"'
     undo = reset --hard
+    pu = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
 [core]
 	editor = vim
 [user]
