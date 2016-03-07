@@ -29,3 +29,6 @@
 	status = true
 [push]
 	default = simple
+[merge]
+	commit = no
+	ff = no
