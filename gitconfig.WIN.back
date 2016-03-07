@@ -1,0 +1,39 @@
+[alias]
+    co = checkout
+    br = branch -ra
+    ci = commit
+    st = status
+    fall = fetch --all
+    pl = pull
+    ps = push
+    ls = stash list
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    llog = log --date=local
+    lp = log -p
+	lt = log --oneline --graph --all --decorate
+    save = stash save
+    pop = stash pop
+    new = !sh -c 'git log $1@{1}..$1{0} "$@"'
+    undo = reset --hard
+    pu = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
+[core]
+	editor = vim
+	autocrlf = true
+[user]
+	name = Kurt Prudhomme
+	email = prud0042@crk.umn.edu
+[color]
+	ut = true
+	branch = true
+	diff = true
+	interactive = true
+	status = true
+[push]
+	default = simple
+[filter "lfs"]
+	smudge = git-lfs smudge %f
+	required = true
+	clean = git-lfs clean %f
+[merge]
+	commit = no
+	ff = no
