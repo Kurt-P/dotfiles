@@ -18,22 +18,54 @@
     pu = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
 [core]
 	editor = vim
-	autocrlf = true
+	autocrlf = false
+	pager = delta # https://github.com/dandavison/delta?tab=readme-ov-file
 [user]
-	name = Kurt Prudhomme
-	email = prud0042@crk.umn.edu
+	name = 
+	email = 
 [color]
 	ut = true
 	branch = true
 	diff = true
 	interactive = true
 	status = true
+	ui = false
 [push]
 	default = simple
+[init]
+	defaultBranch = main
+[safe]
+	directory = ~/
 [filter "lfs"]
-	smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 	required = true
-	clean = git-lfs clean %f
 [merge]
-	commit = no
-	ff = no
+	conflictstyle = zdiff3
+	keepbackup = false
+[rebase]
+	autosquash = true
+	autostash = true
+[commit]
+	verbose = true
+[rerere]
+	enabled = true
+[help]
+	autocorrect = 10
+[diff]
+	algorithm = histogram
+	submodule = log
+	context = 10
+[status]
+	submoduleSummary = true
+[submodule]
+	recurse = true
+[branch]
+	sort = -committerdate
+[fetch]
+	prune = true
+[gpg]
+	format = ssh
+[log]
+	date = iso
