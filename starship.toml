@@ -18,11 +18,11 @@ truncate_to_repo = true # Show path relative to a git repo root
 # Fun substitutions for common folder names
 [directory.substitutions]
 "Documents" = "📜 Docs"
-"Downloads" = "📦 Dloads"
+"Downloads" = "📦 Downloads"
 "Code" = "💻 Code"
 "Projects" = "🚧 Projects"
 "src" = "S"
-"config" = "C"
+"config" = "Conf"
 
 [git_branch]
 symbol = "🌱"
