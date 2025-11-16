@@ -200,5 +200,9 @@ chpwd(){
     ls
 }
 
+if [ -f /usr/bin/starship ]; then
+    eval "$(starship init zsh)"
+fi
+
 ls
 

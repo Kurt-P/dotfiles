@@ -1,0 +1,95 @@
+# ~/.config/starship.toml
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Use a two-line prompt
+format = """$directory$git_branch$git_status$package$nodejs$python$rust$golang$docker$memory_usage$cmd_duration
+$character"""
+
+# ----------------- MODULES (First Line) -----------------
+
+[directory]
+style = "bold red"
+format = "[📁 $path]($style) "
+truncation_length = 4
+truncate_to_repo = true # Show path relative to a git repo root
+
+# Fun substitutions for common folder names
+[directory.substitutions]
+"Documents" = "📜 Docs"
+"Downloads" = "📦 Dloads"
+"Code" = "💻 Code"
+"Projects" = "🚧 Projects"
+"src" = "S"
+"config" = "C"
+
+[git_branch]
+symbol = "🌱"
+style = "bold green"
+format = "[on $symbol $branch]($style) "
+
+[git_status]
+style = "bold yellow"
+format = "[$all_status$ahead_behind]($style) "
+conflicted = "⚔️ CONFLICT "
+ahead = "🔼 ${count} "
+behind = "🔽 ${count} "
+diverged = "🔀 "
+untracked = "❓ ${count} "
+stashed = "📦 "
+modified = "📝 ${count} "
+staged = "✅ ${count} "
+renamed = "🏷️ ${count} "
+deleted = "🗑️ ${count} "
+
+# Language Versions
+[package]
+symbol = "🎁 "
+format = "[via $symbol$version]($style) "
+style = "bold red"
+
+[nodejs]
+symbol = "⬢"
+format = "[via $symbol $version]($style) "
+style = "bold green"
+
+[python]
+symbol = "🐍"
+format = "[via $symbol $version]($style) "
+style = "bold yellow"
+
+[rust]
+symbol = "🦀"
+format = "[via $symbol $version]($style) "
+style = "bold red"
+
+[golang]
+symbol = "🐹"
+format = "[via $symbol $version]($style) "
+style = "bold cyan"
+
+[docker]
+symbol = "🐳"
+format = "[with $symbol $context]($style) "
+style = "bold blue"
+
+[memory_usage]
+symbol = "🧠 "
+format = "[$symbol($ram)]($style) "
+style = "bold magenta"
+disabled = false # Set to true to hide it
+
+[cmd_duration]
+min_time = 1000 # Only show if command takes > 1 second
+format = "[⏱️ $duration]($style) "
+style = "bold yellow"
+
+# ----------------- PROMPT (Second Line) -----------------
+
+[character]
+success_symbol = "[🚀](bold green)"
+error_symbol = "[💥](bold red)"
+vicmd_symbol = "[V](bold green)"
+format = "$symbol "
+

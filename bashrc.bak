@@ -71,3 +71,8 @@ ex () {
 
 ## Show the contence of your home foler when you first open a termainal.
 ls
+
+if [ -f /usr/bin/starship ]; then
+    eval "$(starship init bash)"
+fi
+
