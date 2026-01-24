@@ -1,6 +1,9 @@
 # ~/.zshrc file for zsh non-login shells.
 # see /usr/share/doc/zsh/examples/zshrc for examples
 
+ZLE_REMOVE_SUFFIX_CHARS=$''
+ZLE_SPACE_SUFFIX_CHARS=$''
+
 setopt autocd              # change directory just by typing its name
 #setopt correct            # auto correct mistakes
 setopt interactivecomments # allow comments in interactive mode
